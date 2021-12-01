@@ -1,0 +1,15 @@
+- name: Create guest user
+  user:
+    name: "{{ guest_user_name }}"
+    state: present
+    password: "{{ guest_user_password }}"
+    home: /home/{{ guest_user_name }}
+
+- name: Create welcome file
+  template:
+    src: welcome.txt.j2
+    dest: /home/{{ guest_user_name }}/welcome.txt
+    owner: "{{ guest_user_name }}"
+    group: "{{ guest_user_name }}"
+    mode: '0644'
+

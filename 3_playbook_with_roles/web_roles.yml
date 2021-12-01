@@ -1,0 +1,14 @@
+- name: Create user accounts on web server
+  hosts: web
+  roles:
+    - name: ssh
+
+    - name: guest-user
+      vars:
+        guest_user_name: karol
+        guest_user_password: karolpass
+
+    - name: guest-user
+      vars:
+        guest_user_name: kuba
+        guest_user_password: kubapass

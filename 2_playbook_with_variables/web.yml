@@ -1,0 +1,18 @@
+- name: Configure nginx
+  hosts: web
+  vars:
+    index_destination: /var/www/html/index.html
+  tasks:
+    - name: Install nginx
+      apt:
+        name: "{{ nginx_package_name }}"
+        state: present
+        update_cache: true
+
+    - name: Copy index.html
+      copy:
+        src: index.html
+        dest: "{{ index_destination }}"
+        owner: www-data
+        group: www-data
+        mode: 0644

@@ -1,0 +1,23 @@
+- name: Create user accounts on web server
+  hosts: web
+  tasks:
+    - name: Install and configure ssh
+      import_role:
+        name: ssh
+
+    - name: Create Karol user
+      import_role:
+        name: guest-user
+      vars:
+        guest_user_name: karol
+        guest_user_password: karolpass
+
+    - name: Create Kuba user
+      import_role:
+        name: guest-user
+      vars:
+        guest_user_name: kuba
+        guest_user_password: kubapass
+
+
+
