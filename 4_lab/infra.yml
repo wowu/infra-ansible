@@ -1,0 +1,5 @@
+- name: Configure infra server
+  hosts: infra
+  tasks:
+    - debug:
+        msg: Nothing here yet
