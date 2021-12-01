@@ -1,1 +1,1 @@
-infra ansible_host=49.12.211.122 ansible_user=infra ansible_port=1001
+infra ansible_host=infra.musur.pl ansible_user=infra ansible_port=1010

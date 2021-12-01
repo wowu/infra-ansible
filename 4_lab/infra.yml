@@ -1,5 +1,8 @@
 - name: Configure infra server
   hosts: infra
-  tasks:
-    - debug:
-        msg: Nothing here yet
+  become: true
+  roles:
+    - name: nginx
+    - name: geerlingguy.docker
+      vars:
+        docker_users: [infra]

@@ -1,0 +1,4 @@
+- name: Ensure nginx is installed
+  package:
+    name: nginx
+    state: present
