@@ -33,7 +33,7 @@ Folder `4_lab`.
 2. Dodaj swój klucz ssh:
 
    ```bash
-   ssh-copy-id infra@infra.musur.pl -p 10##
+   ssh-copy-id -p 10## infra@infra.musur.pl
 
    # lub
 
