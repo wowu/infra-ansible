@@ -7,3 +7,5 @@
       vars:
         docker_users: [infra]
     - name: whoami
+      vars:
+        whoami_domain: infra.musur.pl

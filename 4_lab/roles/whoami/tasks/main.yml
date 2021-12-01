@@ -16,3 +16,11 @@
     restart_policy: unless-stopped
     ports:
       - "3000:80"
+
+- name: Upload nginx server config
+  template:
+    src: nginx.conf
+    dest: /etc/nginx/conf.d/whoami.conf
+    owner: root
+    group: root
+  notify: reload nginx
