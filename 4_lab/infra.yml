@@ -6,3 +6,4 @@
     - name: geerlingguy.docker
       vars:
         docker_users: [infra]
+    - name: whoami
